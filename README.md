@@ -9,5 +9,5 @@ Wanted Features:
 * Inline callback code
 * Transfer entire branches to jitted OpenCL/OpenGL kernels
 * Multithreadded branching
-* Different event sources, like websockets, disc, files, OpenCL-events, etc...
+* Different event sources, like websockets, disc, files, OpenCL-events, IDE-code changes, etc...
 * Different caching methods, for events that are emitted faster than they're being procest

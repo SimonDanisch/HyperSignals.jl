@@ -11,3 +11,5 @@ Wanted Features:
 * Multithreadded branching
 * Different event sources, like websockets, disc, files, OpenCL-events, IDE-code changes, etc...
 * Different caching methods, for events that are emitted faster than they're being procest
+* Bidirectional signals
+* lazy updates (state changes only get updated when read)

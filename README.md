@@ -45,5 +45,5 @@ end
 * 
 
 
-## Sketch of a Scene Graph:
+## First, sketchy sketch of a Scene Graph:
 ![SCeneGraph](https://docs.google.com/drawings/d/1mBiD-Cuxv4jpCAf83uU95MipwFdBTB9Z-wv1aojmOw8/pub?w=960&h=720)

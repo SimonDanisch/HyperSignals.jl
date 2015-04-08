@@ -8,15 +8,15 @@ Concept for a Signal system, loosely inspired by [Reactive.jl](https://github.co
 ### Wanted Features:
 * Inline callback code
 * Transfer entire branches to jitted OpenCL/OpenGL kernels
-* Multithreadded branching
+* Multithreaded branching
 * Different event sources, like websockets, disc, files, OpenCL-events, IDE-code changes, etc...
-* Different caching methods, for events that are emitted faster than they're being procest
+* Different caching methods, for events that are emitted faster than they're being processed
 * Bidirectional signals
 * lazy updates (state changes only get updated when read)
 
 ### Problems which Hypersignals should make easier
 
-* creating memory optimal code paths. For example concider loading a video from the hdd, load it into ram, then transfer it to the GPU to filter it. After the filtering, compress it and send it via a network connection to another client. This should look something like this in Hypersignals:
+* creating memory optimal code paths. For example consider loading a video from the hdd, loading it into ram, then transferring it to the GPU to filter it. After the filtering, compress it and send it via a network connection to another client. This should look something like this in Hypersignals:
 ```Julia
 video = lift(open, "file.mp4") # create a signal from a file
 filtered = lift(video) do frame  
@@ -28,7 +28,7 @@ lift(compressed) do frame
   sent(socket, frame)
 end
 ```
-This lift should now sent a data stream to socked with this this kind of pseudo code:
+This lift should now sent a data stream to socket with this this kind of pseudo code:
 ```julia
 video = read_video_from_hdd_into_ram(filepath)
 gpu_code = find_gpu_segments(signal) # should recognize, that filter!, hue! 
